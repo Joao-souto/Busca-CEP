@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Busca por CEP</title>
+</head>
+<body>
+    <h1>Busca por CEP</h1>
+    <form action="#">
+        <div>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" onkeypress="consumoAPI(event)">
+        </div>
+        <div>
+            <label for="logradouro">Endereço: </label>
+            <input type="text" id="logradouro">
+        </div>
+        <div>
+            <label for="numero">Número: </label>
+            <input type="text" id="numero">
+        </div>
+        <div>
+            <label for="complemento">Complemento: </label>
+            <input type="text" id="complemento">
+        </div>
+        <div>
+            <label for="bairro">Bairro: </label>
+            <input type="text" id="bairro">
+        </div>
+        <div>
+            <label for="uf">UF: </label>
+            <input type="text" id="uf">
+        </div>
+        <div>
+            <label for="ddd">DDD: </label>
+            <input type="text" id="ddd">
+        </div>
+    </form>
+<script src="script.js"></script>
+</body>
+</html>
