@@ -13,8 +13,33 @@ inputs.forEach(function(input) {
 });
 
 function consumoAPI(event) {
-    if (event.keyCode === 13 ) {
-        var cep = document.querySelector("#cep").value;
-        var urlCep = `http://viacep.com.br/ws/${cep}/json/` 
-    }
-}
+  if (event.keyCode === 13 ) {
+      var cep = document.querySelector("#cep").value;
+      var urlCep = `http://viacep.com.br/ws/${cep}/json/`;
+      
+      var request = new XMLHttpRequest();
+      request.open('GET', urlCep, true);
+
+      request.onload = function() {
+          if (request.status >= 200 && request.status < 400) {
+              var data = JSON.parse(request.responseText);
+              // Aqui você pode manipular o objeto retornado
+              console.log(data);
+              // Por exemplo:
+              console.log("CEP:", data.cep);
+              console.log("Logradouro:", data.logradouro);
+              console.log("Bairro:", data.bairro);
+              console.log("Cidade:", data.localidade);
+              console.log("Estado:", data.uf);
+          } else {
+              console.error('Erro ao consumir API:', request.statusText);
+          }
+      };
+
+      request.onerror = function() {
+          console.error('Erro de conexão');
+      };
+
+      request.send();
+  }
+} 
