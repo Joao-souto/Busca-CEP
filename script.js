@@ -41,4 +41,3 @@ function consumoAPI(event) {
         request.send();
     }
 }
-

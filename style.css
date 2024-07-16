@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body,html {
+    height: 100%;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background-color: #e8f1f2;
+}
+#container {
+    width: 300px;
+    height: 200px;
+    background-color: #247BA0;
+    padding: 2em 7em 5em 2em;
+    border: 3px solid #205e79;
+}
+form{
+    display: flex;
+}
+.sep{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+input,label{
+    margin-top: 15px;
+    font-size: 2.7vh;
+    font-weight: bold;
+    border: none;
+}
+input:hover{
+    background-color: #c4e0ec;
+}

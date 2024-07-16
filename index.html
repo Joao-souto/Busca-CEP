@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,42 +8,30 @@
     <link rel="stylesheet" href="style.css">
     <title>Busca por CEP</title>
 </head>
+
 <body>
-    <h1>Busca por CEP</h1>
-    <form action="#">
-        <div>
-            <label for="cep">CEP:</label>
-            <input type="text" id="cep" onkeypress="consumoAPI(event)">
-        </div>
-        <div>
-            <label for="logradouro">Endereço: </label>
-            <input type="text" id="logradouro">
-        </div>
-        <div>
-            <label for="numero">Número: </label>
-            <input type="text" id="numero">
-        </div>
-        <div>
-            <label for="complemento">Complemento: </label>
-            <input type="text" id="complemento">
-        </div>
-        <div>
-            <label for="bairro">Bairro: </label>
-            <input type="text" id="bairro">
-        </div>
-        <div>
-            <label for="cidade">Cidade: </label>
-            <input type="text" id="cidade">
-        </div>
-        <div>
-            <label for="uf">UF: </label>
-            <input type="text" id="uf">
-        </div>
-        <div>
-            <label for="ddd">DDD: </label>
-            <input type="text" id="ddd">    
-        </div>
-    </form>
-<script src="script.js"></script>
+    <div id="container">
+        <h1>Busca por CEP</h1>
+        <form action="#">
+            <div class="sep">
+                <label for="cep">CEP:</label>
+                <label for="logradouro">Endereço: </label>
+                <label for="bairro">Bairro: </label>
+                <label for="cidade">Cidade: </label>
+                <label for="uf">UF: </label>
+                <label for="ddd">DDD: </label>
+            </div class="sep">
+            <div>
+                <input type="text" id="cep" onkeypress="consumoAPI(event)" placeholder="Após,    clique 'ENTER'">
+                <input type="text" id="logradouro">
+                <input type="text" id="bairro">
+                <input type="text" id="cidade">
+                <input type="text" id="uf">
+                <input type="text" id="ddd">
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
